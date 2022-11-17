@@ -2,6 +2,10 @@
   package="com.steptracker">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
       android:name=".MainApplication"
@@ -23,4 +27,6 @@
         </intent-filter>
       </activity>
     </application>
+     <uses-feature android:name="android.hardware.location"
+                  android:required="false" />
 </manifest>

@@ -253,7 +253,15 @@ dependencies {
 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation (project(':react-native-google-fit'), {
+    exclude group: "com.google.android.gms"})
 
+    implementation ("com.google.android.gms:play-services-auth:16.0.1"){
+force = true
+}
+implementation ("com.google.android.gms:play-services-fitness:16.0.1"){
+force = true
+}
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
